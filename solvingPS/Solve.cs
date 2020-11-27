@@ -17,5 +17,11 @@ namespace solvingPS
         {
             return sideA * sideA;
         }
+
+        public static void TermsTens(int number, out int tens, out int terms)
+        {
+            terms = number % 10;
+            tens = number / 10 % 10;
+        }
     }
 }

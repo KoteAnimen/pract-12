@@ -41,47 +41,47 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.contextMenuAnswer = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.GetAnswerMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.GetAnswerPS = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.area = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.perimeter = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.contextMenuInputA = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Input567 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.sideSquare = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.contextMenuAnswerN = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.GetAnswerNumber = new System.Windows.Forms.ToolStripMenuItem();
             this.GetAnswer = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.terms = new System.Windows.Forms.TextBox();
             this.tens = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.number = new System.Windows.Forms.NumericUpDown();
-            this.contextMenuInputA = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Input567 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuAnswer = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.GetAnswerMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuInputN = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Input435 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuAnswerN = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.GetAnswerNumber = new System.Windows.Forms.ToolStripMenuItem();
+            this.label4 = new System.Windows.Forms.Label();
+            this.number = new System.Windows.Forms.NumericUpDown();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.contextMenuAnswer.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.contextMenuInputA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sideSquare)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.number)).BeginInit();
-            this.contextMenuInputA.SuspendLayout();
-            this.contextMenuAnswer.SuspendLayout();
-            this.contextMenuInputN.SuspendLayout();
             this.contextMenuAnswerN.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.contextMenuInputN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.number)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -110,6 +110,7 @@
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(180, 22);
             this.Exit.Text = "Выход";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // справкаToolStripMenuItem
             // 
@@ -125,6 +126,7 @@
             this.AboutUs.Name = "AboutUs";
             this.AboutUs.Size = new System.Drawing.Size(180, 22);
             this.AboutUs.Text = "О Программе";
+            this.AboutUs.Click += new System.EventHandler(this.AboutUs_Click);
             // 
             // statusStrip1
             // 
@@ -165,6 +167,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(375, 233);
             this.tabControl1.TabIndex = 2;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.ChangeNumberTask);
             // 
             // tabPage1
             // 
@@ -183,7 +186,7 @@
             this.groupBox2.ContextMenuStrip = this.contextMenuAnswer;
             this.groupBox2.Controls.Add(this.GetAnswerPS);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.area);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.perimeter);
             this.groupBox2.Location = new System.Drawing.Point(6, 92);
@@ -193,6 +196,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Результат";
             // 
+            // contextMenuAnswer
+            // 
+            this.contextMenuAnswer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.GetAnswerMenu});
+            this.contextMenuAnswer.Name = "contextMenuAnswer";
+            this.contextMenuAnswer.Size = new System.Drawing.Size(136, 26);
+            // 
+            // GetAnswerMenu
+            // 
+            this.GetAnswerMenu.Name = "GetAnswerMenu";
+            this.GetAnswerMenu.Size = new System.Drawing.Size(180, 22);
+            this.GetAnswerMenu.Text = "Рассчитать";
+            this.GetAnswerMenu.Click += new System.EventHandler(this.GetAnswerMenu_Click);
+            // 
             // GetAnswerPS
             // 
             this.GetAnswerPS.Location = new System.Drawing.Point(104, 73);
@@ -201,6 +218,7 @@
             this.GetAnswerPS.TabIndex = 4;
             this.GetAnswerPS.Text = "Получить ответ";
             this.GetAnswerPS.UseVisualStyleBackColor = true;
+            this.GetAnswerPS.Click += new System.EventHandler(this.GetAnswerPS_Click);
             // 
             // label3
             // 
@@ -211,13 +229,13 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Площадь";
             // 
-            // textBox2
+            // area
             // 
-            this.textBox2.Location = new System.Drawing.Point(247, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.area.Location = new System.Drawing.Point(247, 42);
+            this.area.Name = "area";
+            this.area.ReadOnly = true;
+            this.area.Size = new System.Drawing.Size(100, 20);
+            this.area.TabIndex = 2;
             // 
             // label2
             // 
@@ -247,6 +265,22 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Исходные данные";
+            // 
+            // contextMenuInputA
+            // 
+            this.contextMenuInputA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.contextMenuInputA.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Input567});
+            this.contextMenuInputA.Name = "contextMenuStrip1";
+            this.contextMenuInputA.Size = new System.Drawing.Size(133, 26);
+            this.contextMenuInputA.Text = "Ввод шаблонов чисел";
+            // 
+            // Input567
+            // 
+            this.Input567.Name = "Input567";
+            this.Input567.Size = new System.Drawing.Size(132, 22);
+            this.Input567.Text = "Ввести 567";
+            this.Input567.Click += new System.EventHandler(this.Input567_Click);
             // 
             // label1
             // 
@@ -296,6 +330,20 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Результат";
             // 
+            // contextMenuAnswerN
+            // 
+            this.contextMenuAnswerN.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.GetAnswerNumber});
+            this.contextMenuAnswerN.Name = "contextMenuAnswerN";
+            this.contextMenuAnswerN.Size = new System.Drawing.Size(216, 48);
+            // 
+            // GetAnswerNumber
+            // 
+            this.GetAnswerNumber.Name = "GetAnswerNumber";
+            this.GetAnswerNumber.Size = new System.Drawing.Size(215, 22);
+            this.GetAnswerNumber.Text = "Найти десятки и единицы";
+            this.GetAnswerNumber.Click += new System.EventHandler(this.GetAnswerNumber_Click);
+            // 
             // GetAnswer
             // 
             this.GetAnswer.Location = new System.Drawing.Point(104, 73);
@@ -304,6 +352,7 @@
             this.GetAnswer.TabIndex = 4;
             this.GetAnswer.Text = "Получить ответ";
             this.GetAnswer.UseVisualStyleBackColor = true;
+            this.GetAnswer.Click += new System.EventHandler(this.GetAnswer_Click);
             // 
             // label6
             // 
@@ -351,6 +400,20 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Исходные данные";
             // 
+            // contextMenuInputN
+            // 
+            this.contextMenuInputN.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Input435});
+            this.contextMenuInputN.Name = "contextMenuInputN";
+            this.contextMenuInputN.Size = new System.Drawing.Size(133, 26);
+            // 
+            // Input435
+            // 
+            this.Input435.Name = "Input435";
+            this.Input435.Size = new System.Drawing.Size(180, 22);
+            this.Input435.Text = "Ввести 435";
+            this.Input435.Click += new System.EventHandler(this.Input435_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -363,64 +426,14 @@
             // number
             // 
             this.number.Location = new System.Drawing.Point(6, 50);
+            this.number.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.number.Name = "number";
             this.number.Size = new System.Drawing.Size(157, 20);
             this.number.TabIndex = 0;
-            // 
-            // contextMenuInputA
-            // 
-            this.contextMenuInputA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.contextMenuInputA.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Input567});
-            this.contextMenuInputA.Name = "contextMenuStrip1";
-            this.contextMenuInputA.Size = new System.Drawing.Size(133, 26);
-            this.contextMenuInputA.Text = "Ввод шаблонов чисел";
-            // 
-            // Input567
-            // 
-            this.Input567.Name = "Input567";
-            this.Input567.Size = new System.Drawing.Size(132, 22);
-            this.Input567.Text = "Ввести 567";
-            this.Input567.Click += new System.EventHandler(this.Input567_Click);
-            // 
-            // contextMenuAnswer
-            // 
-            this.contextMenuAnswer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.GetAnswerMenu});
-            this.contextMenuAnswer.Name = "contextMenuAnswer";
-            this.contextMenuAnswer.Size = new System.Drawing.Size(136, 26);
-            // 
-            // GetAnswerMenu
-            // 
-            this.GetAnswerMenu.Name = "GetAnswerMenu";
-            this.GetAnswerMenu.Size = new System.Drawing.Size(135, 22);
-            this.GetAnswerMenu.Text = "Рассчитать";
-            // 
-            // contextMenuInputN
-            // 
-            this.contextMenuInputN.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Input435});
-            this.contextMenuInputN.Name = "contextMenuInputN";
-            this.contextMenuInputN.Size = new System.Drawing.Size(133, 26);
-            // 
-            // Input435
-            // 
-            this.Input435.Name = "Input435";
-            this.Input435.Size = new System.Drawing.Size(132, 22);
-            this.Input435.Text = "Ввести 435";
-            // 
-            // contextMenuAnswerN
-            // 
-            this.contextMenuAnswerN.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.GetAnswerNumber});
-            this.contextMenuAnswerN.Name = "contextMenuAnswerN";
-            this.contextMenuAnswerN.Size = new System.Drawing.Size(216, 26);
-            // 
-            // GetAnswerNumber
-            // 
-            this.GetAnswerNumber.Name = "GetAnswerNumber";
-            this.GetAnswerNumber.Size = new System.Drawing.Size(215, 22);
-            this.GetAnswerNumber.Text = "Найти десятки и единицы";
             // 
             // Form1
             // 
@@ -445,19 +458,19 @@
             this.tabPage1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.contextMenuAnswer.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.contextMenuInputA.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sideSquare)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.contextMenuAnswerN.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.number)).EndInit();
-            this.contextMenuInputA.ResumeLayout(false);
-            this.contextMenuAnswer.ResumeLayout(false);
             this.contextMenuInputN.ResumeLayout(false);
-            this.contextMenuAnswerN.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.number)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,7 +495,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox area;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox perimeter;
         private System.Windows.Forms.Label label1;

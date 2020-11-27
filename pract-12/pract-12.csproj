@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\solvingPS\solvingPS.csproj">
+      <Project>{b337be20-43c0-4d85-869e-38a7a6a9d4cf}</Project>
+      <Name>solvingPS</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
