@@ -108,7 +108,7 @@
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(180, 22);
+            this.Exit.Size = new System.Drawing.Size(109, 22);
             this.Exit.Text = "Выход";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -124,7 +124,7 @@
             // AboutUs
             // 
             this.AboutUs.Name = "AboutUs";
-            this.AboutUs.Size = new System.Drawing.Size(180, 22);
+            this.AboutUs.Size = new System.Drawing.Size(151, 22);
             this.AboutUs.Text = "О Программе";
             this.AboutUs.Click += new System.EventHandler(this.AboutUs_Click);
             // 
@@ -206,7 +206,7 @@
             // GetAnswerMenu
             // 
             this.GetAnswerMenu.Name = "GetAnswerMenu";
-            this.GetAnswerMenu.Size = new System.Drawing.Size(180, 22);
+            this.GetAnswerMenu.Size = new System.Drawing.Size(135, 22);
             this.GetAnswerMenu.Text = "Рассчитать";
             this.GetAnswerMenu.Click += new System.EventHandler(this.GetAnswerMenu_Click);
             // 
@@ -302,6 +302,7 @@
             this.sideSquare.Name = "sideSquare";
             this.sideSquare.Size = new System.Drawing.Size(157, 20);
             this.sideSquare.TabIndex = 0;
+            this.sideSquare.ValueChanged += new System.EventHandler(this.ClearAnswerPS);
             // 
             // tabPage2
             // 
@@ -335,7 +336,7 @@
             this.contextMenuAnswerN.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.GetAnswerNumber});
             this.contextMenuAnswerN.Name = "contextMenuAnswerN";
-            this.contextMenuAnswerN.Size = new System.Drawing.Size(216, 48);
+            this.contextMenuAnswerN.Size = new System.Drawing.Size(216, 26);
             // 
             // GetAnswerNumber
             // 
@@ -410,7 +411,7 @@
             // Input435
             // 
             this.Input435.Name = "Input435";
-            this.Input435.Size = new System.Drawing.Size(180, 22);
+            this.Input435.Size = new System.Drawing.Size(132, 22);
             this.Input435.Text = "Ввести 435";
             this.Input435.Click += new System.EventHandler(this.Input435_Click);
             // 
@@ -434,6 +435,7 @@
             this.number.Name = "number";
             this.number.Size = new System.Drawing.Size(157, 20);
             this.number.TabIndex = 0;
+            this.number.ValueChanged += new System.EventHandler(this.ClearAnswerN);
             // 
             // Form1
             // 
