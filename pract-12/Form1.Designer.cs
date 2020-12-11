@@ -67,6 +67,7 @@
             this.Input435 = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
             this.number = new System.Windows.Forms.NumericUpDown();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -437,6 +438,11 @@
             this.number.TabIndex = 0;
             this.number.ValueChanged += new System.EventHandler(this.ClearAnswerN);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.UpdateTime);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,6 +524,7 @@
         private System.Windows.Forms.ToolStripMenuItem Input435;
         private System.Windows.Forms.ContextMenuStrip contextMenuAnswerN;
         private System.Windows.Forms.ToolStripMenuItem GetAnswerNumber;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

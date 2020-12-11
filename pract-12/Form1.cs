@@ -16,10 +16,7 @@ namespace pract_12
         public Form1()
         {
             InitializeComponent();
-            DateTime t = DateTime.Now;
-            currentTime.Text = "Время: " + t.ToString("HH:mm");
-            currentData.Text = "Дата: " + t.ToString("dd.MM.yyyy");
-            numberTask.Text = "Номер задачи - " + 1;
+            
         }
 
         private void Input567_Click(object sender, EventArgs e)//событие ввода числа 567 через контекстное меню во вкладке Периметр и площадь квадрата
@@ -102,6 +99,18 @@ namespace pract_12
         {
             tens.Text = "";
             terms.Text = "";
+        }
+
+        private void UpdateTime(object sender, EventArgs e)
+        {
+            Time();
+        }
+        public void Time()
+        {
+            DateTime t = DateTime.Now;
+            currentTime.Text = "Время: " + t.ToString("HH:mm");
+            currentData.Text = "Дата: " + t.ToString("dd.MM.yyyy");
+            numberTask.Text = "Номер задачи - " + 1;
         }
     }
 }
